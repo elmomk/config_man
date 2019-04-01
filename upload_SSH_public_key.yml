@@ -1,0 +1,6 @@
+- name: create a keypair based on my ssh key
+  hosts: localhost
+  tasks:
+          - name: upload public key
+            ec2_key: name=mykey key_material= "{{ item}}"
+            with_file: ~/.ssh/id_rsa.pub
