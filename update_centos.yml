@@ -1,3 +1,4 @@
+---
 - name: Update centos servers
   hosts: tag_os_centos
   tasks:
